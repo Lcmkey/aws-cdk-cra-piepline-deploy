@@ -5,10 +5,6 @@ import { Pipeline, Artifact } from '@aws-cdk/aws-codepipeline'
 import { GitHubSourceAction, GitHubTrigger, CodeBuildAction, S3DeployAction, ManualApprovalAction } from '@aws-cdk/aws-codepipeline-actions'
 
 export interface PipelineProps extends StackProps {
-    github: {
-        owner: string
-        repository: string
-    }
 }
 
 export class PipelineStack extends Stack {

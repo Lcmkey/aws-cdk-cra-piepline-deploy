@@ -1,10 +1,11 @@
 import * as cdk from '@aws-cdk/core'
 
-import { config } from '../config'
-import { Pipeline } from './stacks/pipeline'
+import { PipelineStack } from './stacks/pipeline'
 
 const app = new cdk.App()
 
-new Pipeline(app, 'Pipeline', config)
+new PipelineStack(app, 'PipelineStack', {
+    env: { region: 'us-east-1' },
+});
 
 app.synth()

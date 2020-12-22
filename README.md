@@ -1,3 +1,41 @@
+# How to Use
+
+1. Create .env file with .env.example file content in root directory && change some params
+
+2. Install the Package
+
+    ```properties
+    $ yarn install
+    ```
+
+3. List all Stacks
+
+    ```properties
+    $ cdk ls
+    ```
+
+4. Deploy to AWS
+
+    ```properties
+    $ cdk deploy
+    ```
+
+> After the Stack has been deployed, entry to `code-pipeline` console page to approve the piepline deployment, until the pipeline finished, you can browse the s3 link to test
+
+### Configure GitHub Token
+
+
+Create a [personal access token in GitHub](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and store it in [AWS SecretsManager](https://aws.amazon.com/secrets-manager/). The token needs permissions to read your (private) repositories and configure webhooks.
+
+```bash
+$ aws secretsmanager create-secret \
+    --name GITHUB_OAUTH_TOKEN \
+    --secret-string ${YOUR-GIT-TOKEN} \
+    --region us-east-1
+```
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

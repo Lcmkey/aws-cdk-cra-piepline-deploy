@@ -1,0 +1,505 @@
+{
+  "version": "7.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "PipelineStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/us-east-1",
+      "properties": {
+        "templateFile": "PipelineStack.template.json"
+      },
+      "metadata": {
+        "/PipelineStack/CRAPipelineArtifact/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CRAPipelineArtifactF482FB8C",
+            "trace": [
+              "new Bucket (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1269:22)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:17:40)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Files/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Files8E6940B8",
+            "trace": [
+              "new Bucket (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1269:22)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:22:31)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Files/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FilesPolicyCFAB4773",
+            "trace": [
+              "new BucketPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:42:21)",
+              "Bucket.addToResourcePolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:469:21)",
+              "Function.addToPrincipalOrResource (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/grant.ts:147:45)",
+              "Bucket.grantPublicAccess (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:662:22)",
+              "new Bucket (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1327:12)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:22:31)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/BuildWebsite/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildWebsiteRoleFD9016CE",
+            "trace": [
+              "new Role (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Project (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:703:31)",
+              "new PipelineProject (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:14:5)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:52:47)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/BuildWebsite/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildWebsiteRoleDefaultPolicyF526FDD0",
+            "trace": [
+              "new Policy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Role.addToPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:376:17)",
+              "PipelineProject.addToRolePolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:205:17)",
+              "new Project (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:792:10)",
+              "new PipelineProject (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:14:5)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:52:47)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/BuildWebsite/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildWebsite69491489",
+            "trace": [
+              "new Project (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:756:22)",
+              "new PipelineProject (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:14:5)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:52:47)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CiCdPipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CiCdPipelineRoleAA81A49B",
+            "trace": [
+              "new Role (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:281:31)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CiCdPipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CiCdPipelineRoleDefaultPolicy08D0B8E4",
+            "trace": [
+              "new Policy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Function.addToPrincipal (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Function.addToPrincipalOrResource (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/grant.ts:119:26)",
+              "Bucket.grant (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:689:27)",
+              "Bucket.grantReadWrite (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:626:17)",
+              "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:297:25)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CiCdPipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CiCdPipelineDD00ABC7",
+            "trace": [
+              "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:285:26)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CiCdPipeline/Build/Build/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CiCdPipelineBuildCodePipelineActionRole2777B96A",
+            "trace": [
+              "new Role (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "Pipeline.getRoleForAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:576:20)",
+              "Pipeline._attachActionToPipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:403:29)",
+              "Stage.attachActionToPipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:141:27)",
+              "Stage.addAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:91:29)",
+              "new Stage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:38:12)",
+              "Pipeline.addStage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:332:19)",
+              "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:316:12)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CiCdPipeline/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CiCdPipelineBuildCodePipelineActionRoleDefaultPolicy7EE26DA2",
+            "trace": [
+              "new Policy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Role.addToPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:376:17)",
+              "CodeBuildAction.bound (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:138:18)",
+              "CodeBuildAction.bind (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.ts:59:17)",
+              "RichAction.bind (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:26:24)",
+              "Pipeline._attachActionToPipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:409:37)",
+              "Stage.attachActionToPipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:141:27)",
+              "Stage.addAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:91:29)",
+              "new Stage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:38:12)",
+              "Pipeline.addStage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:332:19)",
+              "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:316:12)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CiCdPipeline/Deploy/Review/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CiCdPipelineDeployReviewCodePipelineActionRole9404ABB4",
+            "trace": [
+              "new Role (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "Pipeline.getRoleForAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:576:20)",
+              "Pipeline._attachActionToPipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:403:29)",
+              "Stage.attachActionToPipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:141:27)",
+              "Stage.addAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:91:29)",
+              "new Stage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:38:12)",
+              "Pipeline.addStage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:332:19)",
+              "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:316:12)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CiCdPipeline/Deploy/Deploy/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CiCdPipelineDeployCodePipelineActionRole54D51005",
+            "trace": [
+              "new Role (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "Pipeline.getRoleForAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:576:20)",
+              "Pipeline._attachActionToPipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:403:29)",
+              "Stage.attachActionToPipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:141:27)",
+              "Stage.addAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:91:29)",
+              "new Stage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:38:12)",
+              "Pipeline.addStage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:332:19)",
+              "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:316:12)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CiCdPipeline/Deploy/Deploy/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CiCdPipelineDeployCodePipelineActionRoleDefaultPolicy3B2AD048",
+            "trace": [
+              "new Policy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Function.addToPrincipal (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Function.addToPrincipalOrResource (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/grant.ts:119:26)",
+              "Bucket.grant (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:689:27)",
+              "Bucket.grantWrite (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:581:17)",
+              "S3DeployAction.bound (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline-actions/lib/s3/deploy-action.ts:112:23)",
+              "S3DeployAction.bind (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.ts:59:17)",
+              "RichAction.bind (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:26:24)",
+              "Pipeline._attachActionToPipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:409:37)",
+              "Stage.attachActionToPipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:141:27)",
+              "Stage.addAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:91:29)",
+              "new Stage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:38:12)",
+              "Pipeline.addStage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:332:19)",
+              "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:316:12)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/WebsiteURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteURL",
+            "trace": [
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:119:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:11:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "main (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1083:30)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
+              "Module.load (node:internal/modules/cjs/loader:948:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:789:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:72:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

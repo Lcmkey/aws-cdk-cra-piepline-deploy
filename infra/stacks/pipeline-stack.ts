@@ -5,6 +5,12 @@ import { Pipeline, Artifact } from "@aws-cdk/aws-codepipeline"
 import { GitHubSourceAction, GitHubTrigger, CodeBuildAction, S3DeployAction, ManualApprovalAction } from "@aws-cdk/aws-codepipeline-actions"
 
 export interface PipelineProps extends StackProps {
+    readonly prefix: string;
+    readonly stage: string;
+    readonly repo: string;
+    readonly owner: string;
+    readonly branch: string;
+    readonly oauthToken: string;
 }
 
 export class PipelineStack extends Stack {
@@ -12,36 +18,43 @@ export class PipelineStack extends Stack {
         super(scope, id, props)
 
         /**
+         * Get Env Variables
+         */
+        const { prefix, stage, repo, owner, branch, oauthToken } = props;
+
+        /**
          * Amazon S3 bucket to store CRA website
          */
-        const pipelineArtifactBucket = new Bucket(this, "CRAPipelineArtifact", {
-            bucketName: `cra-pipeline-artifact`,
+        const pipelineArtifactBucket = new Bucket(this, `${prefix}-${stage}-CRA-Pipeline-Artifact-Bucket`, {
+            bucketName: `${prefix}-${stage}-artifact-bucket`.toLocaleLowerCase(),
             encryption: BucketEncryption.S3_MANAGED,
             removalPolicy: RemovalPolicy.DESTROY, // NOT recommended for production code
         });
-        const bucketWebsite = new Bucket(this, "Files", {
+
+        const bucketWebsite = new Bucket(this, `${prefix}-${stage}-CRA-Website-Bucket`, {
+            bucketName: `${prefix}-${stage}-website-bucket`.toLocaleLowerCase(),
             websiteIndexDocument: "index.html",
             websiteErrorDocument: "error.html",
             publicReadAccess: true,
             removalPolicy: RemovalPolicy.DESTROY, // NOT recommended for production code
-        })
+        });
 
         /**
          * AWS CodeBuild artifacts
          */
-        const sourceArtifact = new Artifact()
-        const buildArtifact = new Artifact()
+        const sourceArtifact = new Artifact();
+        const buildArtifact = new Artifact();
 
         /**
          * Source - Github
          */
         const sourceAction: GitHubSourceAction = new GitHubSourceAction({
             actionName: "Source",
-            owner: "Lcmkey",
-            repo: "aws-cdk-cra-piepline-deploy",
-            oauthToken: SecretValue.secretsManager("GitHubToken"),
+            owner,
+            repo,
+            oauthToken: SecretValue.secretsManager(oauthToken),
             output: sourceArtifact,
-            branch: "master",
+            branch,
             trigger: GitHubTrigger.POLL,
             variablesNamespace: "SourceVariables"
         });
@@ -49,7 +62,7 @@ export class PipelineStack extends Stack {
         /**
          * Pipeline Project - Build
          */
-        const buildProject: PipelineProject = new PipelineProject(this, "BuildWebsite", {
+        const buildProject: PipelineProject = new PipelineProject(this, `${prefix}-${stage}-Build-Website`, {
             projectName: "website-source-build",
             buildSpec: BuildSpec.fromSourceFilename("./infra/buildspec.yml"),
             // environment: {
@@ -89,7 +102,7 @@ export class PipelineStack extends Stack {
         /**
          * Create Pipeline
          */
-        new Pipeline(this, "CiCdPipeline", {
+        new Pipeline(this, `${prefix}-${stage}-Website-Pipeline`, {
             pipelineName: "CRA-Website",
             artifactBucket: pipelineArtifactBucket,
             restartExecutionOnUpdate: true,

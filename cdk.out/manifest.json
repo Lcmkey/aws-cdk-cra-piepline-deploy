@@ -7,21 +7,21 @@
         "file": "tree.json"
       }
     },
-    "PipelineStack": {
+    "CRA-Website-pipeline-Dev-PipelineStack": {
       "type": "aws:cloudformation:stack",
-      "environment": "aws://unknown-account/us-east-1",
+      "environment": "aws://201499839889/us-east-1",
       "properties": {
-        "templateFile": "PipelineStack.template.json"
+        "templateFile": "CRA-Website-pipeline-Dev-PipelineStack.template.json"
       },
       "metadata": {
-        "/PipelineStack/CRAPipelineArtifact/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Pipeline-Artifact-Bucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CRAPipelineArtifactF482FB8C",
+            "data": "CRAWebsitepipelineDevCRAPipelineArtifactBucket96F38E86",
             "trace": [
               "new Bucket (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1269:22)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:17:40)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:28:40)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -40,14 +40,14 @@
             ]
           }
         ],
-        "/PipelineStack/Files/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Website-Bucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "Files8E6940B8",
+            "data": "CRAWebsitepipelineDevCRAWebsiteBucketBC9C3E37",
             "trace": [
               "new Bucket (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1269:22)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:22:31)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:34:31)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -66,18 +66,18 @@
             ]
           }
         ],
-        "/PipelineStack/Files/Policy/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Website-Bucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "FilesPolicyCFAB4773",
+            "data": "CRAWebsitepipelineDevCRAWebsiteBucketPolicy94F21769",
             "trace": [
               "new BucketPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:42:21)",
               "Bucket.addToResourcePolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:469:21)",
               "Function.addToPrincipalOrResource (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/grant.ts:147:45)",
               "Bucket.grantPublicAccess (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:662:22)",
               "new Bucket (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1327:12)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:22:31)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:34:31)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -96,16 +96,16 @@
             ]
           }
         ],
-        "/PipelineStack/BuildWebsite/Role/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Build-Website/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BuildWebsiteRoleFD9016CE",
+            "data": "CRAWebsitepipelineDevBuildWebsiteRole352FBDE6",
             "trace": [
               "new Role (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
               "new Project (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:703:31)",
               "new PipelineProject (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:14:5)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:52:47)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:65:47)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -124,10 +124,10 @@
             ]
           }
         ],
-        "/PipelineStack/BuildWebsite/Role/DefaultPolicy/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Build-Website/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BuildWebsiteRoleDefaultPolicyF526FDD0",
+            "data": "CRAWebsitepipelineDevBuildWebsiteRoleDefaultPolicy15303D44",
             "trace": [
               "new Policy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
               "Role.addToPrincipalPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
@@ -135,8 +135,8 @@
               "PipelineProject.addToRolePolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:205:17)",
               "new Project (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:792:10)",
               "new PipelineProject (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:14:5)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:52:47)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:65:47)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -155,15 +155,15 @@
             ]
           }
         ],
-        "/PipelineStack/BuildWebsite/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Build-Website/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BuildWebsite69491489",
+            "data": "CRAWebsitepipelineDevBuildWebsite32B919B7",
             "trace": [
               "new Project (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:756:22)",
               "new PipelineProject (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:14:5)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:52:47)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:65:47)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -182,15 +182,15 @@
             ]
           }
         ],
-        "/PipelineStack/CiCdPipeline/Role/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CiCdPipelineRoleAA81A49B",
+            "data": "CRAWebsitepipelineDevWebsitePipelineRoleDEA62122",
             "trace": [
               "new Role (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
               "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:281:31)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:105:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -209,10 +209,10 @@
             ]
           }
         ],
-        "/PipelineStack/CiCdPipeline/Role/DefaultPolicy/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CiCdPipelineRoleDefaultPolicy08D0B8E4",
+            "data": "CRAWebsitepipelineDevWebsitePipelineRoleDefaultPolicy20145EEA",
             "trace": [
               "new Policy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
               "Role.addToPrincipalPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
@@ -221,8 +221,8 @@
               "Bucket.grant (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:689:27)",
               "Bucket.grantReadWrite (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:626:17)",
               "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:297:25)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:105:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -241,14 +241,14 @@
             ]
           }
         ],
-        "/PipelineStack/CiCdPipeline/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CiCdPipelineDD00ABC7",
+            "data": "CRAWebsitepipelineDevWebsitePipeline9E6F0AF4",
             "trace": [
               "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:285:26)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:105:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -267,10 +267,10 @@
             ]
           }
         ],
-        "/PipelineStack/CiCdPipeline/Build/Build/CodePipelineActionRole/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Build/Build/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CiCdPipelineBuildCodePipelineActionRole2777B96A",
+            "data": "CRAWebsitepipelineDevWebsitePipelineBuildCodePipelineActionRole52520DF7",
             "trace": [
               "new Role (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
               "Pipeline.getRoleForAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:576:20)",
@@ -280,8 +280,8 @@
               "new Stage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:38:12)",
               "Pipeline.addStage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:332:19)",
               "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:316:12)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:105:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -300,10 +300,10 @@
             ]
           }
         ],
-        "/PipelineStack/CiCdPipeline/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CiCdPipelineBuildCodePipelineActionRoleDefaultPolicy7EE26DA2",
+            "data": "CRAWebsitepipelineDevWebsitePipelineBuildCodePipelineActionRoleDefaultPolicy37A9B0B2",
             "trace": [
               "new Policy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
               "Role.addToPrincipalPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
@@ -317,8 +317,8 @@
               "new Stage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:38:12)",
               "Pipeline.addStage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:332:19)",
               "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:316:12)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:105:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -337,10 +337,10 @@
             ]
           }
         ],
-        "/PipelineStack/CiCdPipeline/Deploy/Review/CodePipelineActionRole/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Review/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CiCdPipelineDeployReviewCodePipelineActionRole9404ABB4",
+            "data": "CRAWebsitepipelineDevWebsitePipelineDeployReviewCodePipelineActionRole9C5E56A6",
             "trace": [
               "new Role (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
               "Pipeline.getRoleForAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:576:20)",
@@ -350,8 +350,8 @@
               "new Stage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:38:12)",
               "Pipeline.addStage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:332:19)",
               "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:316:12)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:105:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -370,10 +370,10 @@
             ]
           }
         ],
-        "/PipelineStack/CiCdPipeline/Deploy/Deploy/CodePipelineActionRole/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Deploy/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CiCdPipelineDeployCodePipelineActionRole54D51005",
+            "data": "CRAWebsitepipelineDevWebsitePipelineDeployCodePipelineActionRoleFDD36BC0",
             "trace": [
               "new Role (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
               "Pipeline.getRoleForAction (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:576:20)",
@@ -383,8 +383,8 @@
               "new Stage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:38:12)",
               "Pipeline.addStage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:332:19)",
               "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:316:12)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:105:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -403,10 +403,10 @@
             ]
           }
         ],
-        "/PipelineStack/CiCdPipeline/Deploy/Deploy/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Deploy/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CiCdPipelineDeployCodePipelineActionRoleDefaultPolicy3B2AD048",
+            "data": "CRAWebsitepipelineDevWebsitePipelineDeployCodePipelineActionRoleDefaultPolicy63203ADA",
             "trace": [
               "new Policy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
               "Role.addToPrincipalPolicy (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
@@ -423,8 +423,8 @@
               "new Stage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:38:12)",
               "Pipeline.addStage (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:332:19)",
               "new Pipeline (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:316:12)",
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:92:9)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:105:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -443,13 +443,13 @@
             ]
           }
         ],
-        "/PipelineStack/WebsiteURL": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/WebsiteURL": [
           {
             "type": "aws:cdk:logicalId",
             "data": "WebsiteURL",
             "trace": [
-              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline.ts:119:9)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:7:1)",
+              "new PipelineStack (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/stacks/pipeline-stack.ts:132:9)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:30:1)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",
@@ -468,7 +468,7 @@
             ]
           }
         ],
-        "/PipelineStack/CDKMetadata/Default": [
+        "/CRA-Website-pipeline-Dev-PipelineStack/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata",
@@ -480,7 +480,7 @@
               "injectMetadataResources (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
               "Object.synthesize (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
               "App.synth (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
-              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:11:5)",
+              "Object.<anonymous> (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/infra/index.ts:40:5)",
               "Module._compile (node:internal/modules/cjs/loader:1083:30)",
               "Module.m._compile (/home/sam_leung/Desktop/github/aws-cdk-cra-piepline-deploy/node_modules/ts-node/src/index.ts:1056:23)",
               "Module._extensions..js (node:internal/modules/cjs/loader:1112:10)",

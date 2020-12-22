@@ -8,17 +8,17 @@
         "id": "Tree",
         "path": "Tree"
       },
-      "PipelineStack": {
-        "id": "PipelineStack",
-        "path": "PipelineStack",
+      "CRA-Website-pipeline-Dev-PipelineStack": {
+        "id": "CRA-Website-pipeline-Dev-PipelineStack",
+        "path": "CRA-Website-pipeline-Dev-PipelineStack",
         "children": {
-          "CRAPipelineArtifact": {
-            "id": "CRAPipelineArtifact",
-            "path": "PipelineStack/CRAPipelineArtifact",
+          "CRA-Website-pipeline-Dev-CRA-Pipeline-Artifact-Bucket": {
+            "id": "CRA-Website-pipeline-Dev-CRA-Pipeline-Artifact-Bucket",
+            "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Pipeline-Artifact-Bucket",
             "children": {
               "Resource": {
                 "id": "Resource",
-                "path": "PipelineStack/CRAPipelineArtifact/Resource",
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Pipeline-Artifact-Bucket/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                   "aws:cdk:cloudformation:props": {
@@ -31,26 +31,27 @@
                         }
                       ]
                     },
-                    "bucketName": "cra-pipeline-artifact"
+                    "bucketName": "cra-website-pipeline-dev-artifact-bucket"
                   }
                 }
               },
               "Notifications": {
                 "id": "Notifications",
-                "path": "PipelineStack/CRAPipelineArtifact/Notifications"
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Pipeline-Artifact-Bucket/Notifications"
               }
             }
           },
-          "Files": {
-            "id": "Files",
-            "path": "PipelineStack/Files",
+          "CRA-Website-pipeline-Dev-CRA-Website-Bucket": {
+            "id": "CRA-Website-pipeline-Dev-CRA-Website-Bucket",
+            "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Website-Bucket",
             "children": {
               "Resource": {
                 "id": "Resource",
-                "path": "PipelineStack/Files/Resource",
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Website-Bucket/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                   "aws:cdk:cloudformation:props": {
+                    "bucketName": "cra-website-pipeline-dev-website-bucket",
                     "websiteConfiguration": {
                       "indexDocument": "index.html",
                       "errorDocument": "error.html"
@@ -60,20 +61,20 @@
               },
               "Notifications": {
                 "id": "Notifications",
-                "path": "PipelineStack/Files/Notifications"
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Website-Bucket/Notifications"
               },
               "Policy": {
                 "id": "Policy",
-                "path": "PipelineStack/Files/Policy",
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Website-Bucket/Policy",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "PipelineStack/Files/Policy/Resource",
+                    "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-CRA-Website-Bucket/Policy/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
                       "aws:cdk:cloudformation:props": {
                         "bucket": {
-                          "Ref": "Files8E6940B8"
+                          "Ref": "CRAWebsitepipelineDevCRAWebsiteBucketBC9C3E37"
                         },
                         "policyDocument": {
                           "Statement": [
@@ -87,7 +88,7 @@
                                   [
                                     {
                                       "Fn::GetAtt": [
-                                        "Files8E6940B8",
+                                        "CRAWebsitepipelineDevCRAWebsiteBucketBC9C3E37",
                                         "Arn"
                                       ]
                                     },
@@ -106,17 +107,17 @@
               }
             }
           },
-          "BuildWebsite": {
-            "id": "BuildWebsite",
-            "path": "PipelineStack/BuildWebsite",
+          "CRA-Website-pipeline-Dev-Build-Website": {
+            "id": "CRA-Website-pipeline-Dev-Build-Website",
+            "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Build-Website",
             "children": {
               "Role": {
                 "id": "Role",
-                "path": "PipelineStack/BuildWebsite/Role",
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Build-Website/Role",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "PipelineStack/BuildWebsite/Role/Resource",
+                    "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Build-Website/Role/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -137,11 +138,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "PipelineStack/BuildWebsite/Role/DefaultPolicy",
+                    "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Build-Website/Role/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "PipelineStack/BuildWebsite/Role/DefaultPolicy/Resource",
+                        "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Build-Website/Role/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -163,13 +164,9 @@
                                           {
                                             "Ref": "AWS::Partition"
                                           },
-                                          ":logs:us-east-1:",
+                                          ":logs:us-east-1:201499839889:log-group:/aws/codebuild/",
                                           {
-                                            "Ref": "AWS::AccountId"
-                                          },
-                                          ":log-group:/aws/codebuild/",
-                                          {
-                                            "Ref": "BuildWebsite69491489"
+                                            "Ref": "CRAWebsitepipelineDevBuildWebsite32B919B7"
                                           }
                                         ]
                                       ]
@@ -182,13 +179,9 @@
                                           {
                                             "Ref": "AWS::Partition"
                                           },
-                                          ":logs:us-east-1:",
+                                          ":logs:us-east-1:201499839889:log-group:/aws/codebuild/",
                                           {
-                                            "Ref": "AWS::AccountId"
-                                          },
-                                          ":log-group:/aws/codebuild/",
-                                          {
-                                            "Ref": "BuildWebsite69491489"
+                                            "Ref": "CRAWebsitepipelineDevBuildWebsite32B919B7"
                                           },
                                           ":*"
                                         ]
@@ -213,13 +206,9 @@
                                         {
                                           "Ref": "AWS::Partition"
                                         },
-                                        ":codebuild:us-east-1:",
+                                        ":codebuild:us-east-1:201499839889:report-group/",
                                         {
-                                          "Ref": "AWS::AccountId"
-                                        },
-                                        ":report-group/",
-                                        {
-                                          "Ref": "BuildWebsite69491489"
+                                          "Ref": "CRAWebsitepipelineDevBuildWebsite32B919B7"
                                         },
                                         "-*"
                                       ]
@@ -239,7 +228,7 @@
                                   "Resource": [
                                     {
                                       "Fn::GetAtt": [
-                                        "CRAPipelineArtifactF482FB8C",
+                                        "CRAWebsitepipelineDevCRAPipelineArtifactBucket96F38E86",
                                         "Arn"
                                       ]
                                     },
@@ -249,7 +238,7 @@
                                         [
                                           {
                                             "Fn::GetAtt": [
-                                              "CRAPipelineArtifactF482FB8C",
+                                              "CRAWebsitepipelineDevCRAPipelineArtifactBucket96F38E86",
                                               "Arn"
                                             ]
                                           },
@@ -262,10 +251,10 @@
                               ],
                               "Version": "2012-10-17"
                             },
-                            "policyName": "BuildWebsiteRoleDefaultPolicyF526FDD0",
+                            "policyName": "CRAWebsitepipelineDevBuildWebsiteRoleDefaultPolicy15303D44",
                             "roles": [
                               {
-                                "Ref": "BuildWebsiteRoleFD9016CE"
+                                "Ref": "CRAWebsitepipelineDevBuildWebsiteRole352FBDE6"
                               }
                             ]
                           }
@@ -277,7 +266,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "PipelineStack/BuildWebsite/Resource",
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Build-Website/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CodeBuild::Project",
                   "aws:cdk:cloudformation:props": {
@@ -293,7 +282,7 @@
                     },
                     "serviceRole": {
                       "Fn::GetAtt": [
-                        "BuildWebsiteRoleFD9016CE",
+                        "CRAWebsitepipelineDevBuildWebsiteRole352FBDE6",
                         "Arn"
                       ]
                     },
@@ -308,17 +297,17 @@
               }
             }
           },
-          "CiCdPipeline": {
-            "id": "CiCdPipeline",
-            "path": "PipelineStack/CiCdPipeline",
+          "CRA-Website-pipeline-Dev-Website-Pipeline": {
+            "id": "CRA-Website-pipeline-Dev-Website-Pipeline",
+            "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline",
             "children": {
               "Role": {
                 "id": "Role",
-                "path": "PipelineStack/CiCdPipeline/Role",
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Role",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "PipelineStack/CiCdPipeline/Role/Resource",
+                    "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Role/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -339,11 +328,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "PipelineStack/CiCdPipeline/Role/DefaultPolicy",
+                    "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Role/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "PipelineStack/CiCdPipeline/Role/DefaultPolicy/Resource",
+                        "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Role/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -362,7 +351,7 @@
                                   "Resource": [
                                     {
                                       "Fn::GetAtt": [
-                                        "CRAPipelineArtifactF482FB8C",
+                                        "CRAWebsitepipelineDevCRAPipelineArtifactBucket96F38E86",
                                         "Arn"
                                       ]
                                     },
@@ -372,7 +361,7 @@
                                         [
                                           {
                                             "Fn::GetAtt": [
-                                              "CRAPipelineArtifactF482FB8C",
+                                              "CRAWebsitepipelineDevCRAPipelineArtifactBucket96F38E86",
                                               "Arn"
                                             ]
                                           },
@@ -387,7 +376,7 @@
                                   "Effect": "Allow",
                                   "Resource": {
                                     "Fn::GetAtt": [
-                                      "CiCdPipelineBuildCodePipelineActionRole2777B96A",
+                                      "CRAWebsitepipelineDevWebsitePipelineBuildCodePipelineActionRole52520DF7",
                                       "Arn"
                                     ]
                                   }
@@ -397,7 +386,7 @@
                                   "Effect": "Allow",
                                   "Resource": {
                                     "Fn::GetAtt": [
-                                      "CiCdPipelineDeployReviewCodePipelineActionRole9404ABB4",
+                                      "CRAWebsitepipelineDevWebsitePipelineDeployReviewCodePipelineActionRole9C5E56A6",
                                       "Arn"
                                     ]
                                   }
@@ -407,7 +396,7 @@
                                   "Effect": "Allow",
                                   "Resource": {
                                     "Fn::GetAtt": [
-                                      "CiCdPipelineDeployCodePipelineActionRole54D51005",
+                                      "CRAWebsitepipelineDevWebsitePipelineDeployCodePipelineActionRoleFDD36BC0",
                                       "Arn"
                                     ]
                                   }
@@ -415,10 +404,10 @@
                               ],
                               "Version": "2012-10-17"
                             },
-                            "policyName": "CiCdPipelineRoleDefaultPolicy08D0B8E4",
+                            "policyName": "CRAWebsitepipelineDevWebsitePipelineRoleDefaultPolicy20145EEA",
                             "roles": [
                               {
-                                "Ref": "CiCdPipelineRoleAA81A49B"
+                                "Ref": "CRAWebsitepipelineDevWebsitePipelineRoleDEA62122"
                               }
                             ]
                           }
@@ -430,13 +419,13 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "PipelineStack/CiCdPipeline/Resource",
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CodePipeline::Pipeline",
                   "aws:cdk:cloudformation:props": {
                     "roleArn": {
                       "Fn::GetAtt": [
-                        "CiCdPipelineRoleAA81A49B",
+                        "CRAWebsitepipelineDevWebsitePipelineRoleDEA62122",
                         "Arn"
                       ]
                     },
@@ -461,7 +450,7 @@
                               "Owner": "Lcmkey",
                               "Repo": "aws-cdk-cra-piepline-deploy",
                               "Branch": "master",
-                              "OAuthToken": "{{resolve:secretsmanager:GitHubToken:SecretString:::}}",
+                              "OAuthToken": "{{resolve:secretsmanager:GITHUB_OAUTH_TOKEN:SecretString:::}}",
                               "PollForSourceChanges": true
                             },
                             "runOrder": 1,
@@ -492,13 +481,13 @@
                             },
                             "configuration": {
                               "ProjectName": {
-                                "Ref": "BuildWebsite69491489"
+                                "Ref": "CRAWebsitepipelineDevBuildWebsite32B919B7"
                               }
                             },
                             "runOrder": 1,
                             "roleArn": {
                               "Fn::GetAtt": [
-                                "CiCdPipelineBuildCodePipelineActionRole2777B96A",
+                                "CRAWebsitepipelineDevWebsitePipelineBuildCodePipelineActionRole52520DF7",
                                 "Arn"
                               ]
                             }
@@ -522,7 +511,7 @@
                             "runOrder": 1,
                             "roleArn": {
                               "Fn::GetAtt": [
-                                "CiCdPipelineDeployReviewCodePipelineActionRole9404ABB4",
+                                "CRAWebsitepipelineDevWebsitePipelineDeployReviewCodePipelineActionRole9C5E56A6",
                                 "Arn"
                               ]
                             }
@@ -542,14 +531,14 @@
                             },
                             "configuration": {
                               "BucketName": {
-                                "Ref": "Files8E6940B8"
+                                "Ref": "CRAWebsitepipelineDevCRAWebsiteBucketBC9C3E37"
                               },
                               "Extract": "true"
                             },
                             "runOrder": 2,
                             "roleArn": {
                               "Fn::GetAtt": [
-                                "CiCdPipelineDeployCodePipelineActionRole54D51005",
+                                "CRAWebsitepipelineDevWebsitePipelineDeployCodePipelineActionRoleFDD36BC0",
                                 "Arn"
                               ]
                             }
@@ -560,7 +549,7 @@
                     "artifactStore": {
                       "type": "S3",
                       "location": {
-                        "Ref": "CRAPipelineArtifactF482FB8C"
+                        "Ref": "CRAWebsitepipelineDevCRAPipelineArtifactBucket96F38E86"
                       }
                     },
                     "name": "CRA-Website",
@@ -570,29 +559,29 @@
               },
               "Source": {
                 "id": "Source",
-                "path": "PipelineStack/CiCdPipeline/Source",
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Source",
                 "children": {
                   "Source": {
                     "id": "Source",
-                    "path": "PipelineStack/CiCdPipeline/Source/Source"
+                    "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Source/Source"
                   }
                 }
               },
               "Build": {
                 "id": "Build",
-                "path": "PipelineStack/CiCdPipeline/Build",
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Build",
                 "children": {
                   "Build": {
                     "id": "Build",
-                    "path": "PipelineStack/CiCdPipeline/Build/Build",
+                    "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Build/Build",
                     "children": {
                       "CodePipelineActionRole": {
                         "id": "CodePipelineActionRole",
-                        "path": "PipelineStack/CiCdPipeline/Build/Build/CodePipelineActionRole",
+                        "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Build/Build/CodePipelineActionRole",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "PipelineStack/CiCdPipeline/Build/Build/CodePipelineActionRole/Resource",
+                            "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Build/Build/CodePipelineActionRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -610,11 +599,7 @@
                                               {
                                                 "Ref": "AWS::Partition"
                                               },
-                                              ":iam::",
-                                              {
-                                                "Ref": "AWS::AccountId"
-                                              },
-                                              ":root"
+                                              ":iam::201499839889:root"
                                             ]
                                           ]
                                         }
@@ -628,11 +613,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "PipelineStack/CiCdPipeline/Build/Build/CodePipelineActionRole/DefaultPolicy",
+                            "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Build/Build/CodePipelineActionRole/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "PipelineStack/CiCdPipeline/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource",
+                                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -647,7 +632,7 @@
                                           "Effect": "Allow",
                                           "Resource": {
                                             "Fn::GetAtt": [
-                                              "BuildWebsite69491489",
+                                              "CRAWebsitepipelineDevBuildWebsite32B919B7",
                                               "Arn"
                                             ]
                                           }
@@ -655,10 +640,10 @@
                                       ],
                                       "Version": "2012-10-17"
                                     },
-                                    "policyName": "CiCdPipelineBuildCodePipelineActionRoleDefaultPolicy7EE26DA2",
+                                    "policyName": "CRAWebsitepipelineDevWebsitePipelineBuildCodePipelineActionRoleDefaultPolicy37A9B0B2",
                                     "roles": [
                                       {
-                                        "Ref": "CiCdPipelineBuildCodePipelineActionRole2777B96A"
+                                        "Ref": "CRAWebsitepipelineDevWebsitePipelineBuildCodePipelineActionRole52520DF7"
                                       }
                                     ]
                                   }
@@ -674,19 +659,19 @@
               },
               "Deploy": {
                 "id": "Deploy",
-                "path": "PipelineStack/CiCdPipeline/Deploy",
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy",
                 "children": {
                   "Review": {
                     "id": "Review",
-                    "path": "PipelineStack/CiCdPipeline/Deploy/Review",
+                    "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Review",
                     "children": {
                       "CodePipelineActionRole": {
                         "id": "CodePipelineActionRole",
-                        "path": "PipelineStack/CiCdPipeline/Deploy/Review/CodePipelineActionRole",
+                        "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Review/CodePipelineActionRole",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "PipelineStack/CiCdPipeline/Deploy/Review/CodePipelineActionRole/Resource",
+                            "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Review/CodePipelineActionRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -704,11 +689,7 @@
                                               {
                                                 "Ref": "AWS::Partition"
                                               },
-                                              ":iam::",
-                                              {
-                                                "Ref": "AWS::AccountId"
-                                              },
-                                              ":root"
+                                              ":iam::201499839889:root"
                                             ]
                                           ]
                                         }
@@ -726,15 +707,15 @@
                   },
                   "Deploy": {
                     "id": "Deploy",
-                    "path": "PipelineStack/CiCdPipeline/Deploy/Deploy",
+                    "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Deploy",
                     "children": {
                       "CodePipelineActionRole": {
                         "id": "CodePipelineActionRole",
-                        "path": "PipelineStack/CiCdPipeline/Deploy/Deploy/CodePipelineActionRole",
+                        "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Deploy/CodePipelineActionRole",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "PipelineStack/CiCdPipeline/Deploy/Deploy/CodePipelineActionRole/Resource",
+                            "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Deploy/CodePipelineActionRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -752,11 +733,7 @@
                                               {
                                                 "Ref": "AWS::Partition"
                                               },
-                                              ":iam::",
-                                              {
-                                                "Ref": "AWS::AccountId"
-                                              },
-                                              ":root"
+                                              ":iam::201499839889:root"
                                             ]
                                           ]
                                         }
@@ -770,11 +747,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "PipelineStack/CiCdPipeline/Deploy/Deploy/CodePipelineActionRole/DefaultPolicy",
+                            "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Deploy/CodePipelineActionRole/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "PipelineStack/CiCdPipeline/Deploy/Deploy/CodePipelineActionRole/DefaultPolicy/Resource",
+                                "path": "CRA-Website-pipeline-Dev-PipelineStack/CRA-Website-pipeline-Dev-Website-Pipeline/Deploy/Deploy/CodePipelineActionRole/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -790,7 +767,7 @@
                                           "Resource": [
                                             {
                                               "Fn::GetAtt": [
-                                                "Files8E6940B8",
+                                                "CRAWebsitepipelineDevCRAWebsiteBucketBC9C3E37",
                                                 "Arn"
                                               ]
                                             },
@@ -800,7 +777,7 @@
                                                 [
                                                   {
                                                     "Fn::GetAtt": [
-                                                      "Files8E6940B8",
+                                                      "CRAWebsitepipelineDevCRAWebsiteBucketBC9C3E37",
                                                       "Arn"
                                                     ]
                                                   },
@@ -820,7 +797,7 @@
                                           "Resource": [
                                             {
                                               "Fn::GetAtt": [
-                                                "CRAPipelineArtifactF482FB8C",
+                                                "CRAWebsitepipelineDevCRAPipelineArtifactBucket96F38E86",
                                                 "Arn"
                                               ]
                                             },
@@ -830,7 +807,7 @@
                                                 [
                                                   {
                                                     "Fn::GetAtt": [
-                                                      "CRAPipelineArtifactF482FB8C",
+                                                      "CRAWebsitepipelineDevCRAPipelineArtifactBucket96F38E86",
                                                       "Arn"
                                                     ]
                                                   },
@@ -843,10 +820,10 @@
                                       ],
                                       "Version": "2012-10-17"
                                     },
-                                    "policyName": "CiCdPipelineDeployCodePipelineActionRoleDefaultPolicy3B2AD048",
+                                    "policyName": "CRAWebsitepipelineDevWebsitePipelineDeployCodePipelineActionRoleDefaultPolicy63203ADA",
                                     "roles": [
                                       {
-                                        "Ref": "CiCdPipelineDeployCodePipelineActionRole54D51005"
+                                        "Ref": "CRAWebsitepipelineDevWebsitePipelineDeployCodePipelineActionRoleFDD36BC0"
                                       }
                                     ]
                                   }
@@ -864,15 +841,15 @@
           },
           "WebsiteURL": {
             "id": "WebsiteURL",
-            "path": "PipelineStack/WebsiteURL"
+            "path": "CRA-Website-pipeline-Dev-PipelineStack/WebsiteURL"
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "PipelineStack/CDKMetadata",
+            "path": "CRA-Website-pipeline-Dev-PipelineStack/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "PipelineStack/CDKMetadata/Default"
+                "path": "CRA-Website-pipeline-Dev-PipelineStack/CDKMetadata/Default"
               }
             }
           }

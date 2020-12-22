@@ -1,0 +1,19 @@
+# AWS
+export CDK_ACCOUNT=
+export AWS_DEFAULT_PROFILE=default
+
+# CDK
+export PREFIX=CRA-Website-pipeline
+export STAGE=Dev
+export CDK_REGION=us-east-1
+export THIS_DEPLOYMENT_ENV=Dev
+export GITHUB_TOEKN_KEY=GITHUB_OAUTH_TOKEN
+
+# Application .env
+export APP_NAME=CRA-Website-pipeline
+export APP_ENV=Dev
+
+# Github Repositroy
+export GITHUB_REPO=aws-cdk-cra-piepline-deploy
+export GITHUB_OWNER=Lcmkey
+export GITHUB_BRANCH=master
